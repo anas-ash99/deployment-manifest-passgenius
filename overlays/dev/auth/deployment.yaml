@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: user-service
+  name: authentication
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: user-service
+      app: authentication
   template:
     metadata:
       labels:
-        app: user-service
+        app: authentication
     spec:
       containers:
-        - name: user-service
-          image: aashraf756/service-user-passgenius:v1.0
+        - name: authentication
+          image: aashraf756/service-authentication-passgenius:v1.0
           ports:
             - containerPort: 8080
           env:

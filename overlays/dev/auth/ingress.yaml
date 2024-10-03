@@ -1,21 +1,19 @@
-# ingress.yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: kong-ingress  # You can rename this as needed
+  name: auth-ingress  # You can rename this as needed
   annotations:
     konghq.com/strip-path: 'true'
-    konghq.com/plugins: jwt-plugin
 spec:
   ingressClassName: kong
   rules:
     - host: microservices.local
       http:
         paths:
-          - path: /web
+          - path: /auth
             pathType: Prefix
             backend:
               service:
-                name: web
+                name: authentication
                 port:
-                  number: 8080
+                  number: 80
