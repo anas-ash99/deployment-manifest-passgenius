@@ -1,0 +1,4 @@
+resources:
+  - mongodb
+  - user-service
+  - kong

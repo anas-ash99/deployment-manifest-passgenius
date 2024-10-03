@@ -1,0 +1,4 @@
+resources:
+  - ingress.yaml
+  - consumer.yaml
+  - jwt-plugin.yaml

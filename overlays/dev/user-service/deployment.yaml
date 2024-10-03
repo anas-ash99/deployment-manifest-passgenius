@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: user-service
+  template:
+    metadata:
+      labels:
+        app: user-service
+    spec:
+      containers:
+        - name: user-service
+          image: aashraf756/service-user-passgenius:v1.0
+          ports:
+            - containerPort: 8080
+          env:
+            - name: SPRING_DATA_MONGODB_URI
+              value: mongodb://mongo:27017/pass-genius
+            - name: JWT_SECRET
+              value: f4f8ab275d167fc80b2e4b4ac940a670a4ebeef571296ce5e3b660b139260735
+            - name: JWT_KEY
+              value: jgiorjgAF61lsdfmQHGDF45ewrfwe
