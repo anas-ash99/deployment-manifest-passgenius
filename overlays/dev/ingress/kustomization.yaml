@@ -1,0 +1,3 @@
+resources:
+  - authenticated-ingress.yaml
+  - open-ingress.yaml

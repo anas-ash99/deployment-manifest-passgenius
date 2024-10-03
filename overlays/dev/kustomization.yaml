@@ -1,4 +1,6 @@
 resources:
   - mongodb
-  - user-service
+  - auth
+  - user
+  - ingress
   - kong

@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: authentication
-          image: aashraf756/service-authentication-passgenius:v1.0
+          image: aashraf756/service-auth-passgenius:v1.0
           ports:
             - containerPort: 8080
           env:
@@ -24,9 +24,9 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: jwt-secret
-                  key: secret  # The key in the secret
+                  key: secret
             - name: JWT_KEY
               valueFrom:
                 secretKeyRef:
                   name: jwt-secret
-                  key: key  # The key in the secret
+                  key: key

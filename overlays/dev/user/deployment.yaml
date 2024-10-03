@@ -13,7 +13,7 @@ spec:
         app: user-service
     spec:
       containers:
-        - name: user-service
+        - name: user
           image: aashraf756/service-user-passgenius:v1.0
           ports:
             - containerPort: 8080
