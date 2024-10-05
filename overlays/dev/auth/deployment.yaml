@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: authentication
-          image: aashraf756/service-auth-passgenius:v1.0
+          image: aashraf756/service-auth-passgenius:q36j5wir
           ports:
             - containerPort: 8080
           env:
