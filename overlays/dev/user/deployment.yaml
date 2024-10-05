@@ -20,13 +20,3 @@ spec:
           env:
             - name: SPRING_DATA_MONGODB_URI
               value: mongodb://mongo:27017/pass-genius
-            - name: JWT_SECRET
-              valueFrom:
-                secretKeyRef:
-                  name: jwt-secret
-                  key: secret  # The key in the secret
-            - name: JWT_KEY
-              valueFrom:
-                secretKeyRef:
-                  name: jwt-secret
-                  key: key  # The key in the secret
