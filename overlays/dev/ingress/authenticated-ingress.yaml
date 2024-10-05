@@ -9,7 +9,7 @@ metadata:
 spec:
   ingressClassName: kong
   rules:
-    - host: microservices.local
+    - host: passgenius.local
       http:
         paths:
           - path: /web
