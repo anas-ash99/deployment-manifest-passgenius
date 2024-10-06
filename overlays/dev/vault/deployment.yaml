@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: vault
-          image: aashraf756/service-vault-passgenius:initial
+          image: aashraf756/service-vault-passgenius:e62mtb4j
           ports:
             - containerPort: 8080
           env:
