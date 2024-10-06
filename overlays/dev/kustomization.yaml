@@ -2,5 +2,6 @@ resources:
   - mongodb
   - auth
   - user
+  - vault
   - ingress
   - kong
