@@ -17,6 +17,3 @@ spec:
           image: aashraf756/service-user-passgenius:6osuwgdf
           ports:
             - containerPort: 8080
-          env:
-            - name: SPRING_DATA_MONGODB_URI
-              value: mongodb://mongo:27017/pass-genius
