@@ -7,7 +7,8 @@ metadata:
 spec:
   ingressClassName: kong
   rules:
-    - host: passgenius.local
+    - host: 149.172.215.195
+
       http:
         paths:
           - path: /auth
