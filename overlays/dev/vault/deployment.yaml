@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vault
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vault
+  template:
+    metadata:
+      labels:
+        app: vault
+    spec:
+      containers:
+        - name: vault
+          image: aashraf756/service-vault-passgenius:initial
+          ports:
+            - containerPort: 8080
+          env:
+            - name: SPRING_DATA_MONGODB_URI
+              value: mongodb://mongo:27017/pass-genius
