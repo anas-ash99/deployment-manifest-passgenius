@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: user
-          image: aashraf756/service-user-passgenius:stgbsob9
+          image: aashraf756/service-user-passgenius:err67dz0
           ports:
             - containerPort: 8080
           env:
