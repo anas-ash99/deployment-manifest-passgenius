@@ -17,3 +17,9 @@ spec:
           image: aashraf756/service-email-passgenius:de06ddb1
           ports:
             - containerPort: 8080
+          env:
+            - name: PASSGENIUS-GMAIL-APP-PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: email-secret
+                  key: app-password
