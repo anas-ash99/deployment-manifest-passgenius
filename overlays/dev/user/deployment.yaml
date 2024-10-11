@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: user
-          image: aashraf756/springboot-user-service:39916bee
+          image: aashraf756/springboot-user-service:36d72c8f
           ports:
             - containerPort: 8080
           env:
