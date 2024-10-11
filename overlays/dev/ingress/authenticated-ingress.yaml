@@ -12,7 +12,7 @@ spec:
     - host: passgenius.local
       http:
         paths:
-          - path: /web
+          - path: /api/web
             pathType: Prefix
             backend:
               service:
