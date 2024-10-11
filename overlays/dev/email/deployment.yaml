@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: email
-          image: aashraf756/service-email-passgenius:2e60b581
+          image: aashraf756/service-email-passgenius:11945fc1
           ports:
             - containerPort: 8080
           env:
