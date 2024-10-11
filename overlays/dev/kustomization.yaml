@@ -3,5 +3,6 @@ resources:
   - auth
   - user
   - vault
+  - email
   - ingress
   - kong
