@@ -19,21 +19,21 @@ spec:
                 name: web
                 port:
                   number: 8080
-          - path: /users
+          - path: /api/users
             pathType: Prefix
             backend:
               service:
                 name: user
                 port:
                   number: 80
-          - path: /email
+          - path: /api/email
             pathType: Prefix
             backend:
               service:
                 name: email
                 port:
                   number: 80
-          - path: /vaults
+          - path: /api/vaults
             pathType: Prefix
             backend:
               service:
