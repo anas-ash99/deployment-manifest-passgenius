@@ -26,6 +26,13 @@ spec:
                 name: user
                 port:
                   number: 80
+          - path: /email
+            pathType: Prefix
+            backend:
+              service:
+                name: email
+                port:
+                  number: 80
           - path: /vaults
             pathType: Prefix
             backend:
