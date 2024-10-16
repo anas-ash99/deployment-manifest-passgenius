@@ -36,6 +36,7 @@ The app relies on certain environmental variables, which need to be rendered fro
 - JWT SECRETS  
 ```bash
   kubectl create secret generic jwt-secret --from-literal=key=<yout-jwt-key> --from-literal=secret=<your-jwt-secret>  --from-literal=algorithm=<jwt-algorithm>
+  kubectl label secret jwt-secret konghq.com/credential=jwt
 ```
 - Email Secret
 ```bash
@@ -50,14 +51,7 @@ Set up Kong as the API gateway using Helm:
 ```
 
 ```bash
- helm install kong/kong --generate-name \
-  --set ingressController.installCRDs=false \
-  --set proxy.type=LoadBalancer \
-  --set ingressController.enabled=true \
-  --set admin.enabled=true \
-  --set admin.http.enabled=true \
-  --set admin.http.servicePort=8001 \
-  --set admin.http.type=LoadBalancer
+ helm helm install kong/kong --generate-name --set ingressController.installCRDs=false --set proxy.type=LoadBalancer --set ingressController.enabled=true --set admin.enabled=true --set admin.http.enabled=true
 ```
 ### 4. Apply Kubernetes Manifests
 To deploy the app, navigate to the `overlays/dev` directory and run the following command: 
